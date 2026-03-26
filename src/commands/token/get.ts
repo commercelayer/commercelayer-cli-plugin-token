@@ -1,5 +1,4 @@
 import {type AppAuth, clColor, clCommand, clConfig } from '@commercelayer/cli-core'
-import type { ArgOutput, FlagOutput, Input } from '@oclif/core/lib/interfaces/parser'
 import Command, { Flags } from '../../base'
 import { decodeAccessToken, getAccessToken } from '../../token'
 
@@ -72,7 +71,7 @@ export default class TokenGet extends Command {
 
   async parse(c: any): Promise<any> {
 		clCommand.fixDashedFlagValue(this.argv, c.flags.clientId)
-		const parsed = await super.parse(c as Input<FlagOutput, FlagOutput, ArgOutput>)
+		const parsed = await super.parse(c)
 		clCommand.fixDashedFlagValue(this.argv, c.flags.clientId, 'i', parsed)
 		return parsed
 	}

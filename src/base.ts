@@ -1,6 +1,5 @@
 import { type AccessTokenInfo, type AuthScope, clColor, clConfig, clOutput, clUpdate } from '@commercelayer/cli-core'
-import { Args, Command, Flags } from '@oclif/core'
-import { CLIError } from '@oclif/core/lib/errors'
+import { Args, Command, Errors, Flags } from '@oclif/core'
 
 
 const pkg: clUpdate.Package = require('../package.json')
@@ -69,7 +68,7 @@ export default abstract class extends Command {
 
         const scopeCheck = clConfig.application.login_scopes
         if (scopeCheck && !scopeCheck.includes(scopePrefix))
-          throw new CLIError(`Invalid scope prefix: ${clColor.msg.error(scopePrefix)}`)
+          throw new Errors.CLIError(`Invalid scope prefix: ${clColor.msg.error(scopePrefix)}`)
 
         scope.push(s)
 

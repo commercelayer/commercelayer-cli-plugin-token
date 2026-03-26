@@ -1,12 +1,10 @@
-import { expect, test } from '@oclif/test'
+import { runCommand } from '@oclif/test'
+import { expect } from 'chai'
+
 
 describe('token:revoke', () => {
-  test
-    .timeout(5000)
-    .stdout()
-    .command(['token:noc'])
-    .it('runs NoC', ctx => {
-      expect(ctx.stdout).to.contain('-= NoC =-')
-    })
-
+  it('runs NoC', async () => {
+    const { stdout } = await runCommand<{ name: string }>(['token:noc'])
+    expect(stdout).to.contain('-= NoC =-')
+  }).timeout(5000)
 })

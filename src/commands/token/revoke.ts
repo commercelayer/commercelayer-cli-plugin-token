@@ -1,6 +1,5 @@
 import { clColor, clCommand } from '@commercelayer/cli-core'
 import * as cliux from '@commercelayer/cli-ux'
-import type { ArgOutput, FlagOutput, Input } from '@oclif/core/lib/interfaces/parser'
 import Command, { Args, Flags } from '../../base'
 import { revokeAccessToken } from '../../token'
 
@@ -57,7 +56,7 @@ export default class TokenRevoke extends Command {
 
   async parse(c: any): Promise<any> {
 		clCommand.fixDashedFlagValue(this.argv, c.flags?.clientId)
-		const parsed = await super.parse(c as Input<FlagOutput, FlagOutput, ArgOutput>)
+		const parsed = await super.parse(c)
 		clCommand.fixDashedFlagValue(this.argv, c.flags?.clientId, 'i', parsed)
 		return parsed
 	}
