@@ -1,3 +1,15 @@
+# [9.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-token/compare/v8.1.1...v9.0.0-oclif4.1) (2026-03-26)
+
+
+### Features
+
+* upgrade to oclif core v4 ([439f261](https://github.com/commercelayer/commercelayer-cli-plugin-token/commit/439f261bed0cf7fd0427b0f3e67ef2fc404c6a39))
+
+
+### BREAKING CHANGES
+
+* upgrade to oclif core v4
+
 ## [8.1.1](https://github.com/commercelayer/commercelayer-cli-plugin-token/compare/v8.1.0...v8.1.1) (2026-03-24)
 
 
