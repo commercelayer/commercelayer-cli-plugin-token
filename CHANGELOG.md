@@ -1,3 +1,10 @@
+# [9.0.0-oclif4.2](https://github.com/commercelayer/commercelayer-cli-plugin-token/compare/v9.0.0-oclif4.1...v9.0.0-oclif4.2) (2026-04-28)
+
+
+### Bug Fixes
+
+* update dependencies and add updates workflow ([818d045](https://github.com/commercelayer/commercelayer-cli-plugin-token/commit/818d0453c5974e707dddb784c298dea76a0973a7))
+
 # [9.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-token/compare/v8.1.1...v9.0.0-oclif4.1) (2026-03-26)
 
 
